@@ -1,0 +1,13 @@
+Linux    Command Description 
+pwd                              Show present working directory 
+ls                                  List files in the current directory 
+ls -l                               List files with details (long format) 
+ls -a                              List all files, including hidden ones 
+cd <dir>                       Change directory 
+cd ..                              Go up one directory 
+mkdir <dir>                 Create a new directory 
+rm <file>                      Remove file 
+rm -r <dir>                   Remove directory and contents 
+touch <file>                Create an empty file 
+cp <src> <dest>          Copy file or directory 
+mv <src> <dest>        Move or rename file/directory
