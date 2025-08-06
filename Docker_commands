@@ -1,0 +1,44 @@
+sudo yum update -y
+sudo yum -y install docker
+
+sudo service docker start
+sudo systemctl enable docker
+docker --version
+sudo docker info
+
+sudo docker run hello-world
+
+sudo docker run -d -p 80:80 nginx
+
+Check Docker Version
+sudo docker version
+
+Run Nginx Container
+sudo docker run -d -p 8080:80 nginx
+
+Test Running Container
+curl http://localhost:8080
+
+List Running Containers
+sudo docker ps
+
+List All Containers (running + stopped)
+sudo docker ps -a
+
+Stop a Container
+sudo docker stop <container_id>
+
+Remove a Container
+sudo docker rm <container_id>
+
+Remove All Stopped Containers
+sudo docker rm $(sudo docker ps -a -q)
+
+Pull an Image
+sudo docker pull ubuntu
+
+Run a Command in a New Container
+sudo docker run -it ubuntu /bin/bash
+
+Execute Command in a Running Container
+sudo docker exec -it <container_id> /bin/bash
