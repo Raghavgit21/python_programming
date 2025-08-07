@@ -52,3 +52,9 @@ sudo docker rm abc12345
 
 
 sudo docker run -d -p 80:80 nginxdemos/hello
+
+mkdir ~/html
+echo "<h1>Hello World from EC2! Raghav Docker </h1>" > ~/html/index.html
+echo "<h1>welcome to my webpage </h1>" >> ~/html/index.html
+
+sudo docker run -d -p 80:80 -v ~/html:/usr/share/nginx/html:ro nginx
